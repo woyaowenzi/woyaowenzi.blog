@@ -1,0 +1,232 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Network | WOYAOWENZI&#39;s blog</title>
+  <meta name="author" content="LiuLin">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+  <meta property="og:site_name" content="WOYAOWENZI&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="WOYAOWENZI&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">WOYAOWENZI&#39;s blog</a></h1>
+  <h2><a href="/">玉不琢，不成器。人不俗，没有趣！</a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/archives">存档</a></li>
+    
+      <li><a href="/">关于</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title tag">Network</h2>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2014-01-02T16:13:29.000Z"><a href="/2014/01/03/URI Scheme/">1月 3 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/01/03/URI Scheme/">URI Scheme</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h3 id="-4ec0-4e48-662f-URI_Scheme-3f-">什么是URI Scheme?</h3>
+<p>一般情况下，遇到这种概念不清的问题，最好的第一手资料就是wiki，实在看不懂，再看百度百科，但前者给出的资料一般都是更加准确一些。<br>以下为维基百科和百度百科关于这个问题的连接：</p>
+<ul>
+<li><a href="http://en.wikipedia.org/wiki/URI_scheme" target="_blank">URI Scheme</a></li>
+<li><a href="http://baike.baidu.com/view/160675.htm" target="_blank">URI</a></li>
+</ul>
+<p>从维基百科上的定义我们得知，URI Scheme 是统一资源标识符（Uniform Resource Identifier ）的命名结构，说白了，就是定义一个资源的(暂且我们先认为 URI Scheme 与 URI 的概念是一样的）。但是，这个资源是一个宽泛的概念，并不一定是我们所说的 web 资源，它可以是你本机的一个文件，也可以是网络上的视频，等等。因此，我们有必要从一些常规的误区分辨出来，以加深我们的理解：</p>
+<ul>
+<li><p><strong>认为 URI 就是 URL</strong>。<br>实际上，从其名称上来看，URI（Uniform Resource Identifier）和 URL（Uniform Resource Locator）两者名称都不一样，所以必然有区别，前者是统一资源标识符，后者是统一资源定位符，后者是网络上用于定位互联网上Web资源的，如 HTML 文档、图像、视频片段、程序等。</p>
+</li>
+<li><p><strong>它是一个通用定义</strong>，不是 “protocols”，也不是 URI protocols 或者 URL protocols。</p>
+</li>
+<li><strong>它经常用于设计特殊的协议。</strong>如http scheme（HTTP协议），XML namespaces，文件标示等等。从上面的一些结论来看，URI Scheme实际上一个概念性的东西，是一个规范，所以符合它的规范的都可以称之为 URI Scheme，当然，我们也可以设计我们自己的 scheme，用来实现我们特殊的目的。</li>
+</ul>
+<p>它一般具有如下的形式：</p>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>&lt;scheme name&gt; : &lt;hierarchical part&gt; [ ? &lt;query&gt; ] [ # &lt;fragment&gt; ]
+</pre></td></tr></table></figure>
+
+<p>举几个常见的例子：</p>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>http:<span class="comment">//write.blog.csdn.net/postedit/7313543,  </span>
+file:<span class="comment">///c:/WINDOWS/clock.avi</span>
+git:<span class="comment">//github.com/user/project-name.git</span>
+ftp:<span class="comment">//user1:1234@地址</span>
+ed2k:<span class="comment">//|file|%5BMAC%E7%89%88%E6%9E%81%E5%93%81%E9%A3%9E%E8%BD%A69%EF%BC%9A%E6%9C%80%E9%AB%98%E9%80%9A%E7%BC%89%5D.%5BMACGAME%5DNeed.For.Speed.Most.Wanted.dmg|4096933888|2c55f0ad2cb7f6b296db94090b63e88e|h=ltcxuvnp24ufx25h2x7ugfaxfchjkwxa|/</span>
+</pre></td></tr></table></figure>
+
+<p>这些都是一个URI Scheme。<br>其中：<br><code>&lt;scheme name&gt;</code>：很明显，这是scheme的名称，对于上面五个scheme，它们scheme名分别是http, file, git, ftp, ed2k（电驴协议），实际上，它们也代表着协议名称。<br><code>&lt;hierarchical part&gt;</code>：实际上，一般情况，它包含 authority 和 path。<br><code>&lt;query&gt;</code>：可选项目，一般使用；隔开或&amp;隔开的键值对<code>&lt;key&gt;=&lt;value&gt;</code><br><code>&lt;fragmentg&gt;</code> ：可选项目包，其它额外的标识信息</p>
+<p>从wiki上抄来一个更加具体的例子可能更好的说明问题，假设有如下两个URI Scheme，<br>foo://username:password@example.com:8042/over/there/index.dtb?type=animal&amp;name=narwhal#nose<br>urn:example:animal:ferret:nose<br>它们的分析结果如下：</p>
+<p>如果你看懂了这个图，你肯定也明白URI Scheme到底是什么玩意了。<br><img src="http://hi.csdn.net/attachment/201203/3/16423_13307557171Ru7.png" alt="URI Scheme"></p>
+<hr>
+<p>在android开发中，我们可能会需要分析webbrowser上web页面的一些特定URI Scheme，比如说点击网页上某个下载按钮，该按钮被点击后发出一个scheme，内里包含了需要下载的文件信息。我们监听这个点击事件，获取并分析URI Scheme，然后去下载对应的文件。实际上，就是要分析一些链接，然后再操作，那如何获取路径这个scheme？<br>假设我们的scheme是电驴协议的URI，如：<br><code>ed2k://|file|%5BMAC%E7%89%88%E6%9E%81%E5%93%81%E9%A3%9E%E8%BD%A69%EF%BC%9A%E6%9C%80%E9%AB%98%E9%80%9A%E7%BC%89%5D.%5BMAC-GAME%5DNeed.For.Speed.Most.Wanted.dmg|4096933888|2c55f0ad2cb7f6b296db94090b63e88e|h=ltcxuvnp24ufx25h2x7ugfaxfchjkwxa|/</code><br>我们需要做的事就是通过webview重写<code>shouldOverrideUrlLoading</code>这个方法，获取指定的URI Scheme，并解析它，最后下载对应文件。<br>该函数的作用是：在新的页面进行跳转前，给应用程序一次接管新的url的机会，当应用程序处理了该url，返回true，如果想让当然的webview自行处理，返回false.<br>以下是一个简单的代码片段。</p>
+<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre>webview.setWebViewClient(<span class="keyword">new</span> WebViewClient() {  
+    <span class="annotation">@Override</span>  
+    <span class="keyword">public</span> <span class="keyword">boolean</span> shouldOverrideUrlLoading(WebView wv, String url) {
+        <span class="keyword">if</span> (<span class="keyword">null</span> != url && url.startsWith(<span class="string">"ed2k:"</span>)) {  
+            <span class="comment">// Parse the url and download file async...  </span>
+            <span class="keyword">return</span> <span class="keyword">true</span>;  
+        } <span class="keyword">else</span> {  
+            <span class="keyword">return</span> super.shouldOverrideUrlLoading(wv, url);  
+        }  
+    }  
+});
+</pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+
+  <nav id="pagination">
+  
+  
+  <div class="clearfix"></div>
+</nav>
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="搜索">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+  <ul class="entry">
+  
+    <li><a href="/categories/Android/">Android</a><small>1</small></li>
+  
+    <li><a href="/categories/Android/iOS/Windows/Linux/C++/">C++</a><small>1</small></li>
+  
+    <li><a href="/categories/Android/iOS/Windows/Linux/C++/JAVA/">JAVA</a><small>1</small></li>
+  
+    <li><a href="/categories/Android/iOS/Windows/Linux/">Linux</a><small>1</small></li>
+  
+    <li><a href="/categories/Android/iOS/Windows/">Windows</a><small>1</small></li>
+  
+    <li><a href="/categories/Android/iOS/">iOS</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+
+  
+<div class="widget tag">
+  <h3 class="title">标签</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Android/">Android</a><small>1</small></li>
+  
+    <li><a href="/tags/Network/">Network</a><small>1</small></li>
+  
+    <li><a href="/tags/URI Scheme/">URI Scheme</a><small>1</small></li>
+  
+    <li><a href="/tags/iOS/">iOS</a><small>1</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2014 LiuLin
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>

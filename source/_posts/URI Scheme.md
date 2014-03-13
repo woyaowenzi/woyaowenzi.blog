@@ -31,10 +31,10 @@ ed2k://|file|%5BMAC%E7%89%88%E6%9E%81%E5%93%81%E9%A3%9E%E8%BD%A69%EF%BC%9A%E6%9C
 ```
 这些都是一个URI Scheme。
 其中：
-<scheme name>：很明显，这是scheme的名称，对于上面五个scheme，它们scheme名分别是http, file, git, ftp, ed2k（电驴协议），实际上，它们也代表着协议名称。
-<hierarchical part>：实际上，一般情况，它包含 authority 和 path。 
-<query>：可选项目，一般使用；隔开或&隔开的键值对<key>=<value>
-<fragmentg> ：可选项目包，其它额外的标识信息
+`<scheme name>`：很明显，这是scheme的名称，对于上面五个scheme，它们scheme名分别是http, file, git, ftp, ed2k（电驴协议），实际上，它们也代表着协议名称。
+`<hierarchical part>`：实际上，一般情况，它包含 authority 和 path。 
+`<query>`：可选项目，一般使用；隔开或&隔开的键值对`<key>=<value>`
+`<fragmentg>` ：可选项目包，其它额外的标识信息
 
 从wiki上抄来一个更加具体的例子可能更好的说明问题，假设有如下两个URI Scheme，
 foo://username:password@example.com:8042/over/there/index.dtb?type=animal&name=narwhal#nose
@@ -42,13 +42,14 @@ urn:example:animal:ferret:nose
 它们的分析结果如下：
 
 如果你看懂了这个图，你肯定也明白URI Scheme到底是什么玩意了。
+![URI Scheme][3]
 
--------------
+---
 
-在android开发中，我们可能会需要分析webbrowser上web页面的一些特定URI Scheme，比如说，点击网页上某个下载按钮，该按钮被点击后发出一个scheme，内里包含了需要下载的文件信息。我们监听这个点击事件，获取其URI Scheme，分析该scheme，然后去下载对应的文件。实际上，就是要分析一些链接，然后再操作，那如何获取路径这个scheme？
+在android开发中，我们可能会需要分析webbrowser上web页面的一些特定URI Scheme，比如说点击网页上某个下载按钮，该按钮被点击后发出一个scheme，内里包含了需要下载的文件信息。我们监听这个点击事件，获取并分析URI Scheme，然后去下载对应的文件。实际上，就是要分析一些链接，然后再操作，那如何获取路径这个scheme？
 假设我们的scheme是电驴协议的URI，如：
-ed2k://|file|%5BMAC%E7%89%88%E6%9E%81%E5%93%81%E9%A3%9E%E8%BD%A69%EF%BC%9A%E6%9C%80%E9%AB%98%E9%80%9A%E7%BC%89%5D.%5BMAC-GAME%5DNeed.For.Speed.Most.Wanted.dmg|4096933888|2c55f0ad2cb7f6b296db94090b63e88e|h=ltcxuvnp24ufx25h2x7ugfaxfchjkwxa|/
-我们需要做的事就是通过webview重写shouldOverrideUrlLoading这个方法，获取指定的URI Scheme，并解析它，最后下载对应文件。
+`ed2k://|file|%5BMAC%E7%89%88%E6%9E%81%E5%93%81%E9%A3%9E%E8%BD%A69%EF%BC%9A%E6%9C%80%E9%AB%98%E9%80%9A%E7%BC%89%5D.%5BMAC-GAME%5DNeed.For.Speed.Most.Wanted.dmg|4096933888|2c55f0ad2cb7f6b296db94090b63e88e|h=ltcxuvnp24ufx25h2x7ugfaxfchjkwxa|/`
+我们需要做的事就是通过webview重写`shouldOverrideUrlLoading`这个方法，获取指定的URI Scheme，并解析它，最后下载对应文件。
 该函数的作用是：在新的页面进行跳转前，给应用程序一次接管新的url的机会，当应用程序处理了该url，返回true，如果想让当然的webview自行处理，返回false.
 以下是一个简单的代码片段。
 ```java
@@ -67,3 +68,4 @@ webview.setWebViewClient(new WebViewClient() {
 
 [1]:http://en.wikipedia.org/wiki/URI_scheme
 [2]:http://baike.baidu.com/view/160675.htm
+[3]:http://hi.csdn.net/attachment/201203/3/16423_13307557171Ru7.png
