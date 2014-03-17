@@ -6,6 +6,7 @@ categories: [Android, Eclipse, Tools]
 
 #工欲善其事，必先利其器
 作为一个Android程序员，Eclipse应该是你第一个上手的IDE，当然你也可以选择传说中的神器：**`Android Studio`** 或 **`IntelliJ IDEA`**。这里暂时不讨论Eclipse和这些新晋升的神器的区别（传送门：[Android Studio比Eclipse好用在哪里？][1]），我们单纯的只从Eclipse出发，如何提高我们的工作效率。
+<!--more-->
 
 ##设置你的File Encoding
 对于很多童鞋来说，没有设置`File Encoding`的习惯，而其注释里面经常是中文注释，为了我们的注释能够在别人的机器正常显示，防止乱码滋生，请修改文本编码方式为 UTF-8。

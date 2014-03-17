@@ -12,6 +12,8 @@ widgets:
 - search
 - category
 - tag
+- blogroll
+- weibo
 
 excerpt_link: Read More
 
