@@ -10,10 +10,9 @@ tags: [Network, URI Scheme]
 * [URI Scheme][1]
 * [URI][2]
 
-从维基百科上的定义我们得知，URI Scheme 是统一资源标识符（Uniform Resource Identifier ）的命名结构，说白了，就是定义一个资源的(暂且我们先认为 URI Scheme 与 URI 的概念是一样的）。但是，这个资源是一个宽泛的概念，并不一定是我们所说的 web 资源，它可以是你本机的一个文件，也可以是网络上的视频，等等。因此，我们有必要从一些常规的误区分辨出来，以加深我们的理解：
-
 <!--more-->
 
+从维基百科上的定义我们得知，URI Scheme 是统一资源标识符（Uniform Resource Identifier ）的命名结构，说白了，就是定义一个资源的(暂且我们先认为 URI Scheme 与 URI 的概念是一样的）。但是，这个资源是一个宽泛的概念，并不一定是我们所说的 web 资源，它可以是你本机的一个文件，也可以是网络上的视频，等等。因此，我们有必要从一些常规的误区分辨出来，以加深我们的理解：
 * **认为 URI 就是 URL**。
 实际上，从其名称上来看，URI（Uniform Resource Identifier）和 URL（Uniform Resource Locator）两者名称都不一样，所以必然有区别，前者是统一资源标识符，后者是统一资源定位符，后者是网络上用于定位互联网上Web资源的，如 HTML 文档、图像、视频片段、程序等。
 
