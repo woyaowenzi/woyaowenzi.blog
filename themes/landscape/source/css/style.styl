@@ -28,6 +28,7 @@ html, body, #container
 body
   background: color-background
   font: font-size font-sans
+  -webkit-text-size-adjust: 100%
 
 .outer
   clearfix()
@@ -65,11 +66,14 @@ body
   .mobile-nav-on &
     left: mobile-nav-width
 
-#main
-  @media mq-normal
-    column(main-column)
-    if sidebar && sidebar isnt bottom
-      float: sidebar is left ? right : left
+if sidebar and sidebar isnt bottom
+  #main
+    @media mq-normal
+      column(main-column)
+
+if sidebar is left
+  #main
+    float: right
 
 @import "_extend"
 @import "_partial/header"

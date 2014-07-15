@@ -1,3 +1,7 @@
+// Config
+support-for-ie = false
+vendor-prefixes = webkit moz ms official
+
 // Colors
 color-default = #555
 color-grey = #999
@@ -40,7 +44,10 @@ mobile-nav-width = 280px
 main-column = 9
 sidebar-column = 3
 
-_sidebar-column = sidebar is bottom ? 0 : sidebar-column
+if sidebar and sidebar isnt bottom
+  _sidebar-column = sidebar-column
+else
+  _sidebar-column = 0
 
 // Grids
 column-width = 80px

@@ -1,7 +1,7 @@
 title: 高效使用Eclipse
 date: 2014-03-14 23:41:56
 tags: [Android, Eclipse，效率, tools]
-categories: [Android, Eclipse, Tools]
+categories: [Eclipse]
 ---
 
 #工欲善其事，必先利其器
