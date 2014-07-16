@@ -1,7 +1,7 @@
 title: Eclipse快捷键
 date: 2014-01-02 23:41:56
-tags: [Android, Eclipse，效率, tools]
-categories: [Android, Eclipse, Tools]
+tags: [Eclipse，效率, tools]
+categories: [Eclipse]
 ---
 
 Eclipse快捷键的重要性就不必多说了，为了加速编码、阅读代码的效率，我认为每个人都应该掌握下面常用的快捷键。如果你忘记了快捷键，可通过`Ctrl-Shift-L`打开快捷键窗口查看。
