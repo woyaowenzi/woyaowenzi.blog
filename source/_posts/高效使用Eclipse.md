@@ -84,7 +84,7 @@ public View getCurrentFocus() {
 将SVN集成到Eclipse是一个很好的方式，可以让我们不用从Windows文件夹中切来去。早期的时候，我一直不太信任这个SVN插件，原因在于感觉直接使用`TortoiseSVN + Beyond Compare`会更加爽一些，SVN插件自带的比较工具太差了，比较起代码来极度不爽。
 ### SVN插件的选择
 目前市面上有两个很好的插件：
-- Subversion（Eclipse团队官方出品）
+- Subversive（Eclipse团队官方出品）
 - Subclipse（SVN团队官方出品）
 
 它们的之间的优劣可以看看这篇文章：[Subclipse vs Subversive][7]

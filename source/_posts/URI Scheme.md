@@ -44,7 +44,7 @@ urn:example:animal:ferret:nose
 它们的分析结果如下：
 
 如果你看懂了这个图，你肯定也明白URI Scheme到底是什么玩意了。
-![URI Scheme][3]
+![URI Scheme](/image/uri/uri-scheme.png)
 
 ---
 
