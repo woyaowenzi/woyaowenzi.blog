@@ -1,6 +1,7 @@
 title: Cookie
 date: 2012-03-03 15:20:56
 tags: [Android, Cookie]
+categories: [Android]
 ---
 
 ## 1. 什么是cookie?
